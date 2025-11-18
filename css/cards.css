@@ -1,0 +1,182 @@
+.container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 160px 40px;
+  margin-top: 80px;
+}
+
+.card {
+  width: 250px;
+  height: 145px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  padding: 20px;
+  padding-top: 60px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Expanded state class - appears as overlay without affecting original card */
+.card-expanded {
+  width: 750px;
+  height: 445px;
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 20px;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  padding-top: 60px;
+}
+
+/* Overlay backdrop - no transition */
+.card-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Remove all hover-related CSS - we'll use click instead */
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Profile image positioning */
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
+/* When card is expanded, center and enlarge profile image */
+.card.expanded .profile-img {
+  width: 150px;
+  height: 150px;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.name-tag {
+  text-align: center;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.name-tag h2 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* When card is expanded, center username below profile picture */
+.card.expanded .name-tag {
+  position: absolute;
+  top: 290px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: auto;
+}
+
+.card.expanded .name-tag h2 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.tag {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.card.expanded .tag {
+  font-size: 1.2rem;
+}
+
+/* Remove chevron completely */
+.chevron {
+  display: none;
+}
+
+/* Hide social links in normal card view */
+.social-links {
+  display: none;
+}
+
+/* Social links in expanded card */
+.social-links-expanded {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-link-expanded {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link-expanded:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.social-link-expanded img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 150px 0;
+  }
+  
+  /* Adjust hover effect for mobile */
+  .card:hover {
+    width: 350px;
+    height: 200px;
+  }
+}
