@@ -8,3 +8,4 @@ Create Personal Website (Linktree Remake / Brand)
 + Update Profile Card's (Similar to guns.lol)
 + Update Host Systems and Buy Custom Website bio (1.99$)
 
+This section will be deleted and removed once the project is finalized and up-to-par with expectations.
