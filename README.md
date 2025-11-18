@@ -4,6 +4,9 @@ This Project will have 2 Goals:
 Create Biolink
 Create Personal Website (Linktree Remake / Brand)
 
++ Organize File System (Update Folder Information with Github Additions)
++ Remove/Add New Asset Files
++ Revamp Website Format System
 + Add Connections like Icons (Badges, Socials, Music)
 + Update Profile Card's (Similar to guns.lol)
 + Update Host Systems and Buy Custom Website bio (1.99$)
