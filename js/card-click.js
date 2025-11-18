@@ -4,7 +4,7 @@ class CardClickHandler {
         this.currentExpandedCard = null;
         this.init();
     }
-
+                                
     init() {
         // Create overlay element
         this.createOverlay();
@@ -43,7 +43,7 @@ class CardClickHandler {
 
         // Create a new expanded card element
         const expandedCard = document.createElement('div');
-        expandedCard.className = 'card-expanded';
+                    expandedCard.className = 'card-expanded';
 
         // Clone the content from the original card
         const profileImg = originalCard.querySelector('.profile-img');
