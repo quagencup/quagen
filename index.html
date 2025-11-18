@@ -13,28 +13,20 @@
     <h1 class="animated-title">@quagen website</h1>
 </body>
 <html>
-    body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-    font-family: monospace; /* Monospace font works well for typing effects */
-}
+    font-family: monospace; /* Monospace font works well for typing effects 
 
-/* Styles for the animated title */
+/* Styles for the an
 .animated-title {
     /* The width animation creates the typing illusion */
-    overflow: hidden; /* Ensures text doesn't wrap as it "types" */
-    border-right: .15em solid orange; /* The "cursor" */
-    white-space: nowrap; /* Keeps the text on a single line */
-    margin: 0 auto; /* Centers the text */
-    letter-spacing: .15em; /* Spacing between characters */
+    overflow: hidden; 
+    border-right: .15em solid orange;
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
     animation: 
-        typing 3.5s steps(15, end), /* 15 steps for 15 characters, 3.5 seconds duration */
-        blink-caret .75s step-end infinite; /* Blinking cursor effect */
-    width: 0; /* Starts with zero width */
+        typing 3.5s steps(15, end), 
+        blink-caret .75s step-end infinite; 
+    width: 0; 
 }
 
 /* The typing animation effect */
