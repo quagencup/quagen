@@ -1,7 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>@quagen website</title>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The actual browser tab title (cannot be animated with CSS/JS in the tab itself) -->
+    <title>@quagen website</title>
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- The animated title will go here -->
+    <h1 class="animated-title">@quagen website</h1>
+</body>
+<html>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: monospace; /* Monospace font works well for typing effects */
+}
+
+/* Styles for the animated title */
+.animated-title {
+    /* The width animation creates the typing illusion */
+    overflow: hidden; /* Ensures text doesn't wrap as it "types" */
+    border-right: .15em solid orange; /* The "cursor" */
+    white-space: nowrap; /* Keeps the text on a single line */
+    margin: 0 auto; /* Centers the text */
+    letter-spacing: .15em; /* Spacing between characters */
+    animation: 
+        typing 3.5s steps(15, end), /* 15 steps for 15 characters, 3.5 seconds duration */
+        blink-caret .75s step-end infinite; /* Blinking cursor effect */
+    width: 0; /* Starts with zero width */
+}
+
+/* The typing animation effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The cursor blinking effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
         <link rel="icon" href="https://github.com/zoxycontin/rsc-bio/blob/main/assets/caticon.png?raw=true"/>
         <link rel="stylesheet" href="css/cards.css">
         <link rel="stylesheet" href="css/background.css">
