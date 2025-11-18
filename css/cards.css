@@ -123,11 +123,6 @@
   font-size: 1.2rem;
 }
 
-/* Remove chevron completely */
-.chevron {
-  display: none;
-}
-
 /* Hide social links in normal card view */
 .social-links {
   display: none;
