@@ -177,7 +177,7 @@
 }
 
 .credit-link::after {
-    content: 'Made with ♥ by cake';
+    content: 'Made by quagencup';
     position: absolute;
     bottom: 100%;
     left: 50%;
